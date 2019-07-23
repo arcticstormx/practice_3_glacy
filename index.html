@@ -2,17 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Glacy</title>
+    <title>Главная</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <header class="main-header">
-        <nav class="main-header__nav nav">
-          <div class="nav__logo logo">
+        <nav class="nav main-header__nav">
+          <div class="logo nav__logo">
             <img class="logo__self" src="#" alt="Glacy logo">
           </div>
-          <ul class="nav__pages-list pages-list">
+          <ul class="pages-list nav__pages-list">
             <li class="pages-list__item">
               <a class="pages-list__link" href="#">Каталог</a>
             </li>
@@ -23,7 +23,7 @@
               <a class="pages-list__link" href="#">О Компании</a>
             </li>
           </ul>
-          <ul class="nav__user user-nav">
+          <ul class="user-nav nav__user">
             <li class="user-nav__btn">
               <button class="user-nav__btn-search" aria-label="search field"></button>
             </li>
@@ -35,10 +35,15 @@
             </li>
           </ul>
         </nav>
+        <div class="contacts-small main-header">
+          <span class="contacts-small__schedule">С 10 до 20, ежедневно</span>
+          <a class="contacts-small__tel" href="" >8 812 450-25-25</a>
+        </div>
     </header>
     <main class="index-main">
       <h1 class="visually-hidden">Магазин мороженого Глэйси</h1>
-      <section class="slider">
+
+      <section class="slider index-main__slider">
         <h2 class="visually-hidden">Слайдер</h2>
 
         <div class="slider-controls slider__controls">
@@ -67,7 +72,7 @@
         <button class="basic-btn basic-btn--slider slider__order-btn" type="button">Давайте оба!</button>
       </section>
 
-      <section class="promotion">
+      <section class="promotion index-main__promotion">
         <div class="promotion-block promotion__block">
           <b class="promotion-block__title">Малинка даром!</b>
           <p class="promotion-block__paragraph">
@@ -82,34 +87,38 @@
           </p>
           <a class="basic-btn promotion-block__btn" href="#"></a>
         </div>
-        <ul class="hit-list promotion__hit-list">
-          <li class="hit-list__item">
-            <span class="hit-list__item-price">310&#8381;/кг</span>
-            <p class="hit-list__desc">
+        <ul class="ice-cream-list promotion__ice-cream-list">
+          <li class="ice-cream-list__item ice-cream-list__item--hit">
+            <img src="" alt="" class="ice-cream-list__item-image">
+            <span class="ice-cream-list__item-price">310&#8381;/кг</span>
+            <p class="ice-cream-list__desc">
               Сливочное с апельсиновым джемом и цитрусовой стружкой
             </p>
           </li>
-          <li class="hit-list__item">
-            <span class="hit-list__item-price">380&#8381;/кг</span>
-            <p class="hit-list__desc">
+          <li class="ice-cream-list__item ice-cream-list__item--hit">
+            <img src="" alt="" class="ice-cream-list__item-image">
+            <span class="ice-cream-list__item-price">380&#8381;/кг</span>
+            <p class="ice-cream-list__desc">
               Сливочно-кофейное с кусочками шоколада
             </p>
           </li>
-          <li class="hit-list__item">
-            <span class="hit-list__item-price">355&#8381;/кг</span>
-            <p class="hit-list__desc">
+          <li class="ice-cream-list__item ice-cream-list__item--hit">
+            <img src="" alt="" class="ice-cream-list__item-image">
+            <span class="ice-cream-list__item-price">355&#8381;/кг</span>
+            <p class="ice-cream-list__desc">
               Сливочно-клубничное с присыпкой из белого шоколада
             </p>
           </li>
-          <li class="hit-list__item">
-            <span class="hit-list__item-price">415&#8381;/кг</span>
-            <p class="hit-list__desc">
+          <li class="ice-cream-list__item ice-cream-list__item--hit">
+            <img src="" alt="" class="ice-cream-list__item-image">
+            <span class="ice-cream-list__item-price">415&#8381;/кг</span>
+            <p class="ice-cream-list__desc">
               Сливочное крем-брюле с карамельной подливкой
             </p>
           </li>
         </ul>
       </section>
-      <section class="about-us">
+      <section class="about-us index-main__about-us">
         <h2 class="about-us__header">
           Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес
         </h2>
@@ -155,7 +164,7 @@
           </form>
         </div>
       </section>
-      <section class="map-contacts">
+      <section class="map-contacts index-main__map-contacts">
         <div class="map-contacts__contacts-block">
           <span class="map-contacts__pre-address-text">
             Адрес главного офиса и офлайн-магазина:
@@ -172,6 +181,7 @@
         </div>
       </section>
     </main>
+
     <footer class="main-footer">
       <ul class="social-links main-footer__social-links">
         <li class="social-links__link">
@@ -215,7 +225,7 @@
         <a class="copyright__logo" href="">
           <!-- SVG -->
         </a>
-        <span class="copyright__name">Сделано в HTML Academy © 2017</span>
+        <span class="copyright__name">Сделано в HTML Academy &#169; 2017</span>
       </div>
     </footer>
 </body>
