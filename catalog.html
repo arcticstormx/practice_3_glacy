@@ -14,7 +14,7 @@
           </div>
           <ul class="pages-list nav__pages-list">
             <li class="pages-list__item">
-              <a class="pages-list__link" href="#">Каталог</a>
+              <a class="pages-list__link pages-list__link--active" href="#">Каталог</a>
             </li>
             <li class="pages-list__item">
               <a class="pages-list__link" href="#">Доставка и оплата</a>
@@ -55,100 +55,145 @@
         </li>
       </ol>
       
-      <form action="" class="catalog-form catalog-main__catalog-form">
-            <div class="catalog-form__container">
-              <label for=""></label>
-              <select name="" id=""></select>
-            </div>
-            <div class="catalog-form__container">
-              <label for=""></label>
-              <input type="range">
-            </div>
-            <div class="catalog-form__container">
-              <input type="radio">
-              <label for=""></label>
-              <input type="radio">
-              <label for=""></label>
-              <input type="radio">
-              <label for=""></label>
-              <input type="radio">
-              <label for=""></label>
-            </div>
-            <div class="catalog-form__container">
-              <input type="checkbox">
-              <label for=""></label>
-              <input type="checkbox">
-              <label for=""></label>
-              <input type="checkbox">
-              <label for=""></label>
-              <input type="checkbox">
-              <label for=""></label>
-              <input type="checkbox">
-              <label for=""></label>
-            </div>
-        <button class="catalog-form__submit-btn" type="submit"></button>
+      <form action="#" method="post" class="catalog-form catalog-main__catalog-form">
+          <fieldset class="catalog-form__container">
+            <legend class="catalog-form__legend">Сортировка:</legend>
+            <label class="catalog-form__label" for="sort-by"></label>
+            <select class="catalog-form__input" name="sort-by" id="form-sort-by">
+              <option value="popular">по популярности</option>
+              <option value="cheap">сначала недорогие</option>
+              <option value="expensive">сначала дорогие</option>
+              <option value="fattness">по жирности</option>
+            </select>
+          </fieldset>
+          <fieldset class="catalog-form__container">
+            <legend class="catalog-form__legend">Цена: 100 руб. - 500 руб.</legend>
+            <label class="catalog-form__label" for=""></label>
+            <input type="range">
+          </fieldset>
+          <fieldset class="catalog-form__container">
+            <legend class="catalog-form__legend">Жирность:</legend>
+            <input class="catalog-form__input catalog-form__input--radio" id="form-radio-fat-0" type="radio" value="0" name="fat[]">
+            <label class="catalog-form__label" for="form-radio-fat-0">0%</label>
+            <input class="catalog-form__input catalog-form__input--radio" id="form-radio-fat<10" type="radio" value="<10" name="fat[]">
+            <label class="catalog-form__label" for="form-radio-fat<10">до 10%</label>
+            <input class="catalog-form__input catalog-form__input--radio" id="form-radio-fat<30" type="radio" value="<30" name="fat[]">
+            <label class="catalog-form__label" for="form-radio-fat<30">до 30%</label>
+            <input class="catalog-form__input catalog-form__input--radio" id="form-radio-fat>30" type="radio" value=">30" name="fat[]">
+            <label class="catalog-form__label" for="form-radio-fat>30">выше 30%</label>
+          </fieldset>
+          <fieldset class="catalog-form__container">
+            <legend class="catalog-form__legend">Наполнители:</legend>
+            <input class="catalog-form__input catalog-form__input--checkbox" id="form-chkbx-choco" type="checkbox">
+            <label class="catalog-form__label" for="form-chkbx-choco">шоколадные</label>
+            <input class="catalog-form__input catalog-form__input--checkbox" id="form-chkbx-sugar" type="checkbox">
+            <label class="catalog-form__label" for="form-chkbx-sugar">сахарные присыпки</label>
+            <input class="catalog-form__input catalog-form__input--checkbox" id="form-chkbx-fruits" type="checkbox">
+            <label class="catalog-form__label" for="form-chkbx-fruits">фрукты</label>
+            <input class="catalog-form__input catalog-form__input--checkbox" id="form-chkbx-syrop" type="checkbox">
+            <label class="catalog-form__label" for="form-chkbx-syrop">сиропы</label>
+            <input class="catalog-form__input catalog-form__input--checkbox" id="form-chkbx-jam" type="checkbox">
+            <label class="catalog-form__label" for="form-chkbx-jam">джемы</label>
+          </fieldset>
+        <button class="catalog-form__submit-btn" type="submit">Применить</button>
       </form>
         
       <ul class="ice-cream-list catalog-main__ice-cream-list">
         <li class="ice-cream-list__item">
           <img src="" alt="" class="ice-cream-list__item-image">
-          <span class="ice-cream-list__item-price"></span>
-          <p class="ice-cream-list__desc"></p>
+          <span class="ice-cream-list__item-price">310&#8381;/кг</span>
+          <p class="ice-cream-list__desc">
+            Сливочное с апельсиновым джемом и цитрусовой стружкой
+          </p>
+          <a class="basic-btn ice-cream-list__btn" href="#">Быстрый просмотр</a>
         </li>
         <li class="ice-cream-list__item">
           <img src="" alt="" class="ice-cream-list__item-image">
-          <span class="ice-cream-list__item-price"></span>
-          <p class="ice-cream-list__desc"></p>
+          <span class="ice-cream-list__item-price">380&#8381;/кг</span>
+          <p class="ice-cream-list__desc">
+            Сливочно-кофейное с кусочками шоколада
+          </p>
+          <a class="basic-btn ice-cream-list__btn" href="#">Быстрый просмотр</a>
         </li>
         <li class="ice-cream-list__item">
           <img src="" alt="" class="ice-cream-list__item-image">
-          <span class="ice-cream-list__item-price"></span>
-          <p class="ice-cream-list__desc"></p>
+          <span class="ice-cream-list__item-price">355&#8381;/кг</span>
+          <p class="ice-cream-list__desc">
+            Сливочно-клубничное с присыпкой из белого шоколада
+          </p>
+          <a class="basic-btn ice-cream-list__btn" href="#">Быстрый просмотр</a>
         </li>
         <li class="ice-cream-list__item">
           <img src="" alt="" class="ice-cream-list__item-image">
-          <span class="ice-cream-list__item-price"></span>
-          <p class="ice-cream-list__desc"></p>
+          <span class="ice-cream-list__item-price">415&#8381;/кг</span>
+          <p class="ice-cream-list__desc">
+            Сливочное крем-брюле с карамельной подливкой
+          </p>
+          <a class="basic-btn ice-cream-list__btn" href="#">Быстрый просмотр</a>
         </li>
         <li class="ice-cream-list__item">
           <img src="" alt="" class="ice-cream-list__item-image">
-          <span class="ice-cream-list__item-price"></span>
-          <p class="ice-cream-list__desc"></p>
+          <span class="ice-cream-list__item-price">325&#8381;/кг</span>
+          <p class="ice-cream-list__desc">
+            Сливочное с брусничным джемом
+          </p>
+          <a class="basic-btn ice-cream-list__btn" href="#">Быстрый просмотр</a>
         </li>
         <li class="ice-cream-list__item">
           <img src="" alt="" class="ice-cream-list__item-image">
-          <span class="ice-cream-list__item-price"></span>
-          <p class="ice-cream-list__desc"></p>
+          <span class="ice-cream-list__item-price">410&#8381;/кг</span>
+          <p class="ice-cream-list__desc">
+            Сливочно-черничное с цельными ягодами черники 
+          </p>
+          <a class="basic-btn ice-cream-list__btn" href="#">Быстрый просмотр</a>
         </li>
         <li class="ice-cream-list__item">
           <img src="" alt="" class="ice-cream-list__item-image">
-          <span class="ice-cream-list__item-price"></span>
-          <p class="ice-cream-list__desc"></p>
+          <span class="ice-cream-list__item-price">375&#8381;/кг</span>
+          <p class="ice-cream-list__desc">
+            Сливочно-лимонное с карамельной присыпкой
+          </p>
+          <a class="basic-btn ice-cream-list__btn" href="#">Быстрый просмотр</a>
         </li>
         <li class="ice-cream-list__item">
           <img src="" alt="" class="ice-cream-list__item-image">
-          <span class="ice-cream-list__item-price"></span>
-          <p class="ice-cream-list__desc"></p>
+          <span class="ice-cream-list__item-price">320&#8381;/кг</span>
+          <p class="ice-cream-list__desc">
+            Сливочное с шоколадной стружкой
+          </p>
+          <a class="basic-btn ice-cream-list__btn" href="#">Быстрый просмотр</a>
         </li>
         <li class="ice-cream-list__item">
           <img src="" alt="" class="ice-cream-list__item-image">
-          <span class="ice-cream-list__item-price"></span>
-          <p class="ice-cream-list__desc"></p>
+          <span class="ice-cream-list__item-price">440&#8381;/кг</span>
+          <p class="ice-cream-list__desc">
+            Сливочно-ванильное с кусочками шоколада
+          </p>
+          <a class="basic-btn ice-cream-list__btn" href="#">Быстрый просмотр</a>
         </li>
         <li class="ice-cream-list__item">
           <img src="" alt="" class="ice-cream-list__item-image">
-          <span class="ice-cream-list__item-price"></span>
-          <p class="ice-cream-list__desc"></p>
+          <span class="ice-cream-list__item-price">435&#8381;/кг</span>
+          <p class="ice-cream-list__desc">
+            Сливочноe с ментоловым сиропом
+          </p>
+          <a class="basic-btn ice-cream-list__btn" href="#">Быстрый просмотр</a>
         </li>
         <li class="ice-cream-list__item">
           <img src="" alt="" class="ice-cream-list__item-image">
-          <span class="ice-cream-list__item-price"></span>
-          <p class="ice-cream-list__desc"></p>
+          <span class="ice-cream-list__item-price">355&#8381;/кг</span>
+          <p class="ice-cream-list__desc">
+            Сливочное с кусочками черного шоколада
+          </p>
+          <a class="basic-btn ice-cream-list__btn" href="#">Быстрый просмотр</a>
         </li>
         <li class="ice-cream-list__item">
           <img src="" alt="" class="ice-cream-list__item-image">
-          <span class="ice-cream-list__item-price"></span>
-          <p class="ice-cream-list__desc"></p>
+          <span class="ice-cream-list__item-price">420&#8381;/кг</span>
+          <p class="ice-cream-list__desc">
+            Сливочное с мятным сиропом
+          </p>
+          <a class="basic-btn ice-cream-list__btn" href="#">Быстрый просмотр</a>
         </li>
       </ul>
       <div class="pagination catalog-main__pagination">
