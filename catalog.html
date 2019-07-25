@@ -14,7 +14,14 @@
           </div>
           <ul class="pages-list nav__pages-list">
             <li class="pages-list__item">
-              <a class="pages-list__link pages-list__link--active" href="#">Каталог</a>
+              <a class="pages-list__link pages-list__link--active popup-nav-btn" href="#">Каталог</a>
+              <ul class="popup-nav">
+                <li class="popup-nav__header">Новинки</li>
+                <li class="popup-nav__link">Сливочное</li>
+                <li class="popup-nav__link">Щербеты</li>
+                <li class="popup-nav__link">Фруктовый лёд</li>
+                <li class="popup-nav__link">Мелорин</li>
+              </ul>
             </li>
             <li class="pages-list__item">
               <a class="pages-list__link" href="#">Доставка и оплата</a>
@@ -25,19 +32,53 @@
           </ul>
           <ul class="user-nav nav__user">
             <li class="user-nav__btn">
-              <button class="user-nav__btn-search" aria-label="search field"></button>
+              <button class="user-nav__btn-search" aria-label="Поиск"></button>
+              <div class="user-search">
+                <form action="#" class="user-search__form">
+                  <input type="text" class="user-search__input" placeholder="Что ищем?">
+                </form>
+              </div>
             </li>
             <li class="user-nav__btn">
-              <button class="user-nav__btn-login" aria-label="login button">Вход</button>
+              <button class="user-nav__btn-login" aria-label="Вход в личный кабинет">Вход</button>
+              <div class="user-login">
+                <form action="#" class="user-login__form">
+                  <input class="user-login__input-email" type="e-mail" placeholder="Электронная почта">
+                  <input class="user-login__input-password" type="password" placeholder="Пароль">
+                  <div class="user-login__button-container">
+                    <button class="basic-btn user-login__button">Войти</button>
+                    <div class="user-login__button-links">
+                      <a class="user-login__link" href="">Забыл пароль?</a>
+                      <a class="user-login__link" href="">Новая регистрация</a>
+                    </div>
+                  </div>
+                </form>
+              </div>
             </li>
             <li class="user-nav__btn">
-              <button class="user-nav__btn-cart" aria-label="cart button">Пусто</button>
+              <button class="user-nav__btn-cart" aria-label="Корзина">Пусто</button>
+              <div class="user-cart-popup">
+                <table class="user-cart-popup__cart-content-table cart-content-table">
+                  <tr class="cart-content-table__row">
+                    <td class="cart-content-table__item-name">Пломбир с апельсиновым джемом</td>
+                    <td class="cart-content-table__item-amount-container"><i class="cart-content-table__item-amount">1,5</i> кг х <i class="cart-content-table__item-price">200</i> руб.</td>
+                    <td class="cart-content-table__item-total-price">300 руб.</td>
+                  </tr>
+                  <tr class="cart-content-table__row">
+                    <td class="cart-content-table__item-name">Клубничный пломбир с присыпкой из белого шоколада</td>
+                    <td class="cart-content-table__item-amount-container"><i class="cart-content-table__item-amount">1,5</i> кг х <i class="cart-content-table__item-price">300</i> руб.</td>
+                    <td class="cart-content-table__item-total-price">450 руб.</td>
+                  </tr>
+                </table>
+                <p class="user-cart-popup__total-container">Итого: <span class="user-cart-popup__total">750 руб.</span></p>
+                <button class="basic-btn user-cart-popup__order-btn" type="button">Оформить заказ</button>
+              </div>
             </li>
           </ul>
         </nav>
-        <div class="contacts-small main-header">
-          <span class="contacts-small__schedule">С 10 до 20, ежедневно</span>
-          <a class="contacts-small__tel" href="" >8 812 450-25-25</a>
+        <div class="contacts-aside">
+          <span class="contacts-aside__schedule">С 10 до 20, ежедневно</span>
+          <a class="contacts-aside__tel" href="" >8 812 450-25-25</a>
         </div>
     </header>
     <main class="catalog-main">
