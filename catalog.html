@@ -6,11 +6,11 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
+<body class="body-catalog">
     <header class="main-header">
         <nav class="nav main-header__nav">
           <div class="logo nav__logo">
-            <img class="logo__self" src="#" alt="Glacy logo">
+            <img class="logo__self" src="img/gllacy-logo.svg" alt="Glacy logo" width="154" height="64">
           </div>
           <ul class="pages-list nav__pages-list">
             <li class="pages-list__item">
@@ -31,16 +31,16 @@
             </li>
           </ul>
           <ul class="user-nav nav__user">
-            <li class="user-nav__btn">
-              <button class="user-nav__btn-search" aria-label="Поиск"></button>
+            <li class="user-nav__item">
+              <button class="user-nav__btn user-nav__btn--search" aria-label="Поиск"></button>
               <div class="user-search">
                 <form action="#" class="user-search__form">
                   <input type="text" class="user-search__input" placeholder="Что ищем?">
                 </form>
               </div>
             </li>
-            <li class="user-nav__btn">
-              <button class="user-nav__btn-login" aria-label="Вход в личный кабинет">Вход</button>
+            <li class="user-nav__item">
+              <button class="user-nav__btn user-nav__btn--login" aria-label="Вход в личный кабинет">Вход</button>
               <div class="user-login">
                 <form action="#" class="user-login__form">
                   <input class="user-login__input-email" type="e-mail" placeholder="Электронная почта">
@@ -55,8 +55,8 @@
                 </form>
               </div>
             </li>
-            <li class="user-nav__btn">
-              <button class="user-nav__btn-cart" aria-label="Корзина">Пусто</button>
+            <li class="user-nav__item">
+              <button class="user-nav__btn user-nav__btn--cart" aria-label="Корзина">Пусто</button>
               <div class="user-cart-popup">
                 <table class="user-cart-popup__cart-content-table cart-content-table">
                   <tr class="cart-content-table__row">
