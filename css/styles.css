@@ -34,8 +34,17 @@ body {
     margin: -1px;
 }
 
-.body-index,
-.body-catalog {
+.wrapper {
+  padding-left: 27px;
+  padding-right: 27px;
+}
+
+.index-body {
+  background-color: #849d8f;
+}
+
+.index-body,
+.catalog-body {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
 }
@@ -44,22 +53,24 @@ body {
 
 
 .main-header {
+  position: relative;
   display: flex;
   flex-direction: row;
 
   flex: 1;
-
-  background-color: #849d8f;
 }
 
 .nav {
   display: flex;
+  justify-content: space-between;
+
   flex: 2;
 
-  justify-content: space-between;
+  padding-top: 9px;
 }
 
-.nav__user-nav {
+.nav__logo {
+  margin-right: 24px;
 }
 
 .pages-list-container {
@@ -75,6 +86,14 @@ body {
   padding: 0;
 
   list-style: none;
+}
+
+.pages-list__item {
+  margin-right: 28px;
+}
+
+.pages-list__item:last-child {
+  margin-right: 0;
 }
 
 .pages-list__link {
@@ -99,7 +118,18 @@ body {
   list-style: none;
 }
 
+.user-nav__item {
+  margin-right: 10px;
+}
+
+.user-nav__item:last-child {
+  margin-right: 0;
+}
+
 .user-nav__btn {
+  display: flex;
+  align-items: center;
+
   font-size: 14px;
   line-height: 14px;
   font-weight: 500;
@@ -127,4 +157,44 @@ body {
 
 .user-nav__btn--cart {
   padding: 6px 33px 6px 16px;
+
+  border-radius: 17px;
+}
+
+.user-nav__login-icon,
+.user-nav__cart-icon {
+  margin-right: 8px;
+}
+
+.contacts-aside {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+
+  right: 0;
+  top: 74px;
+
+
+}
+
+.contacts-aside__schedule {
+  margin-bottom: 10px;
+
+  text-align: right;
+
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 700;
+
+  color: #fff;
+}
+
+.contacts-aside__tel {
+  font-size: 22px;
+  line-height: 22px;
+  font-weight: 700;
+
+  color: #fff;
+
+  text-decoration: none;
 }
