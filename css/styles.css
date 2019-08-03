@@ -39,6 +39,11 @@ body {
   padding-right: 27px;
 }
 
+.wrapper-margin {
+  margin-left: 27px;
+  margin-right: 27px;
+}
+
 .index-body {
   background-color: #849d8f;
 }
@@ -47,6 +52,32 @@ body {
 .catalog-body {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
+}
+
+.basic-btn {
+  padding: 15px 22px;
+
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 700;
+
+  color: #fff;
+
+  border: none;
+
+  border-radius: 23px;
+  background: linear-gradient(#f26843, #e74a35);
+  box-shadow: 0 2px rgba(172, 16, 0, 0.64);
+
+}
+
+.basic-btn--slider {
+  padding: 15px 40px 17px;
+
+  font-size: 32px;
+  line-height: 32px;
+
+  border-radius: 31px;
 }
 
 /*HEADER*/
@@ -66,7 +97,6 @@ body {
 
   flex: 2;
 
-  padding-top: 9px;
 }
 
 .nav__logo {
@@ -197,4 +227,222 @@ body {
   color: #fff;
 
   text-decoration: none;
+}
+
+
+/*MAIN*/
+
+
+.slider-list {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.slider-list__item {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  margin-bottom: 41px;
+  padding: 338px 250px 0;
+}
+
+.slider-list__item::before {
+  position: absolute;
+  content: "";
+
+  top: 10px;
+  left: 250px;
+
+  z-index: -10;
+
+  width: 647px;
+  height: 584px;
+
+  background-image: url("../img/ice-cream-pair-1.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.slider-list__item-title {
+  margin-bottom: 26px;
+
+  text-align: center;
+
+  font-size: 60px;
+  line-height: 74px;
+
+  color: #fff;
+}
+
+.promotion {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  margin-bottom: 40px;
+}
+
+.promotion-block {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex-basis: 518px;
+  padding: 23px 21px;
+
+  border-radius: 12px;
+}
+
+.promotion-block--raspberry {
+  background-image: url("../img/raspberry-back.png");
+  background-repeat: no-repeat;
+  background-position: center;
+
+}
+
+.promotion-block--chocolate {
+  background-image: url("../img/chocolate-back.png");
+  background-repeat: no-repeat;
+  background-position: center;
+
+}
+
+.promotion-block__title {
+  font-size: 35px;
+  line-height: 35px;
+  font-weight: 700;
+
+  color: #fff;
+}
+
+.promotion-block__paragraph {
+  font-size: 18px;
+  line-height: 23px;
+  font-weight: 700;
+
+  color: #fff;
+}
+
+.promotion-block__link {
+  margin-left: auto;
+
+  text-decoration: none;
+}
+
+.ice-cream-hits {
+  display: flex;
+
+  margin-bottom: 40px;
+}
+
+.ice-cream-hits__ice-cream-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.ice-cream-list {
+  margin: 0;
+  padding: 0;
+}
+
+.ice-cream-list__item {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  flex-basis: 267px;
+}
+
+.ice-cream-list__item::before {
+  position: absolute;
+  content: "";
+
+  top: 0;
+  left: 0;
+
+  width: 61px;
+  height: 61px;
+
+  background-image: url("../img/hit-cloud.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.ice-cream-list__item-image {
+  margin-bottom: 13px;
+}
+
+.ice-cream-list__item-price {
+  position: absolute;
+
+  top: 214px;
+  left: 0;
+  
+  font-size: 45px;
+  line-height: 45px;
+  font-weight: 700;
+
+  color: #fff;
+
+  text-shadow: 1px 1px 3px rgba(49, 50, 53, 0.5);
+}
+
+.ice-cream-list__desc {
+  margin: 0;
+
+  text-align: center;
+
+  font-size: 16px;
+  line-height: 22px;
+  font-size: 500;
+
+  color: #fff;
+
+  text-decoration: underline #9db1a5;
+}
+
+.about-us {
+  display: flex;
+  flex-direction: column;
+
+  padding-top: 20px;
+  padding-left: 21px;
+  padding-right: 28px;
+
+  border-radius: 15px;
+  background-image: url("../img/waffle-pattern.jpg");
+  background-repeat: repeat;
+  background-clip: padding-box;
+}
+
+.about-us__header {
+  margin: 0;
+  margin-bottom: 30px;
+  padding: 0;
+
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 500;
+
+  color: #323232;
+
+}
+
+.about-us__paragraph {
+  margin: 0;
+  padding-left: 55px;
+
+
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 500;
 }
