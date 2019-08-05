@@ -446,3 +446,118 @@ body {
   line-height: 22px;
   font-weight: 500;
 }
+
+.main-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.social-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex: 0 1 186px;
+  
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.social-links__link {
+  display: flex;
+}
+
+.social-links__link-self {
+  display: flex;
+}
+
+.social-links__icon {
+  border: 3px solid #c2cec7;
+  border-radius: 50%;
+}
+
+.main-footer__footer-nav {
+
+}
+
+.footer-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex: 0 1 306px;
+
+}
+
+.footer-nav__container {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-nav__link {
+  font-size: 13px;
+  line-height: 1;
+  font-weight: 400;
+
+  color: #fff;
+
+  text-decoration: underline #9db1a5;
+}
+
+.footer-nav__link:first-child {
+  margin-bottom: 10px;
+}
+
+.footer-nav__link--suppliers {
+  position: relative;
+
+  font-weight: 700;
+}
+
+.footer-nav__link--suppliers::before {
+  position: absolute;
+  content: "";
+
+  left: -22px;
+  top: 0;
+
+  width: 15px;
+  height: 13px;
+
+  background-image: url("../img/heart.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.copyright {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  flex: 0 1 192px;
+}
+
+.copyright__name {
+  font-size: 12px;
+  line-height: 1;
+  font-weight: 400;
+
+  color: #fff;
+}
+
+.copyright__logo {
+  display: flex;
+
+  margin-bottom: 8px;
+}
+
+.copyright__logo-self {
+}
+
+.copyright__name-company {
+  font-style: normal;
+
+  text-decoration: underline #9db1a5;
+}
