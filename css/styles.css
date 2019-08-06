@@ -104,6 +104,8 @@ body {
 }
 
 .pages-list-container {
+  position: relative;
+
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -120,6 +122,7 @@ body {
 
 .pages-list__item {
   margin-right: 28px;
+  padding: 9px 14px;
 }
 
 .pages-list__item:last-child {
@@ -135,6 +138,99 @@ body {
 
   text-decoration: none;
   border-bottom: 1px solid #b3cbbd;
+}
+
+.pages-list__item:hover {
+  color: #000;
+
+  background-color: #fff;
+  border-radius: 16px;
+}
+
+.pages-list__item:hover .pages-list__link {
+  color: #000;
+
+  border: none;
+}
+
+.popup-nav {
+  position: absolute;
+
+  display: none;
+  flex-direction: column;
+
+  top: 56.5px;
+  left: 173px;
+
+  z-index: 100;
+
+  margin: 0;
+  padding: 0;
+
+  width: 141px;
+  height: 171px;
+
+  background: #fff;
+  border-radius: 5px;
+
+  box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
+
+  list-style: none;
+}
+
+.popup-nav__link {
+  display: flex;
+  flex-grow: 1;
+}
+
+.popup-nav__link__header {
+  display: flex;
+  margin: 0 6px 0;
+  padding: 13px 0 15px 15px;
+
+  font-size: 14px;
+  line-height: 1;
+  font-weight: 700;
+
+  color: #323232;
+
+  border-bottom: 1px solid #d1d0ce;
+}
+
+.popup-nav__link-self {
+  display: flex;
+  flex: 1 1 auto;
+  align-items: center;
+
+  padding-left: 21px;
+
+  vertical-align: middle;
+
+  font-size: 14px;
+  line-height: 1;
+  font-weight: 400;
+
+  color: #323232;
+
+  text-decoration: none;
+}
+
+.popup-nav__link-self:hover {
+  background: #fbded7;
+}
+
+.popup-nav__link-self:active {
+  background: #f6b5a5;
+}
+
+.popup-nav__link-self--active {
+  color: #fff;
+
+  background: #d07058;
+}
+
+.catalog-popup-show:hover .popup-nav {
+  display: flex;
 }
 
 .user-nav {
