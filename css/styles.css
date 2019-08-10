@@ -48,6 +48,10 @@ body {
   background-color: #849d8f;
 }
 
+.catalog-body {
+  background-color: #9aaea3;
+}
+
 .index-body,
 .catalog-body {
   font-family: "Roboto", sans-serif;
@@ -135,16 +139,6 @@ body {
   margin-right: 0;
 }
 
-.pages-list__link {
-  font-size: 16px;
-  line-height: 16px;
-  font-weight: 700;
-
-  color: #fff;
-
-  text-decoration: none;
-  border-bottom: 1px solid #b3cbbd;
-}
 
 .pages-list__item:hover {
   color: #000;
@@ -157,6 +151,28 @@ body {
   color: #000;
 
   border: none;
+}
+
+.pages-list__item--active {
+  color: #fff;
+
+  background: #d07058;
+  border-radius: 16px;
+}
+
+.pages-list__item--active .pages-list__link {
+  border: none;
+}
+
+.pages-list__link {
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 700;
+
+  color: #fff;
+
+  text-decoration: none;
+  border-bottom: 1px solid #b3cbbd;
 }
 
 .popup-nav {
@@ -334,6 +350,7 @@ body {
 
 /*MAIN*/
 
+/*INDEX*/
 
 .slider-list {
   position: relative;
@@ -464,7 +481,7 @@ body {
   flex-basis: 267px;
 }
 
-.ice-cream-list__item::before {
+.ice-cream-list__item--hit::before {
   position: absolute;
   content: "";
 
@@ -510,6 +527,10 @@ body {
   color: #fff;
 
   text-decoration: underline #9db1a5;
+}
+
+.ice-cream-list__btn {
+  display: none;
 }
 
 .about-us {
@@ -812,11 +833,218 @@ body {
   margin-right: 25px;
 }
 
+
+/*CATALOG*/
+
+.catalog-main {
+  margin-top: 27px;
+}
+
+.breadcrumbs {
+  display: flex;
+  flex-direction: row;
+
+  margin: 0;
+
+  list-style: none;
+}
+
+.breadcrumbs__link-container {
+  position: relative;
+
+  display: flex;
+
+  margin-right: 22px;
+}
+
+.breadcrumbs__link-container:not(:last-child)::after {
+  position: absolute;
+  content: "\00BB";
+
+  right: -16px;
+  top: -2px;
+
+  color: #fff;
+
+}
+
+.breadcrumbs__link {
+  font-size: 14px;
+  line-height: 1;
+  font-weight: 400;
+
+  color: #fff;
+
+  text-decoration: underline #aebeb5;
+}
+
+
+.breadcrumbs__link--active {
+  text-decoration: none;
+}
+
+.catalog-main__title {
+  font-size: 35px;
+  line-height: 1;
+  font-weight: 700;
+
+  color: #fff;
+}
+
+.catalog-form {
+}
+
+.catalog-main__catalog-form {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex: 0 1 auto;
+  width: 875px;
+
+  margin-bottom: 40px;
+}
+
+.catalog-form__fieldset-container {
+  display: flex;
+
+  margin-right: 16px;
+  margin-bottom: 16px;
+}
+
+.catalog-form__fieldset {
+  margin: 0;
+  padding: 0;
+
+  border: none;
+}
+
+.catalog-form__container {
+  display: flex;
+  align-items: center;
+
+  height: 36px;
+
+  background-color: #a8b9af;
+  border-radius: 18px;
+}
+
+.catalog-form__legend {
+  margin-bottom: 8px;
+
+  font-size: 14px;
+  line-height: 1;
+  font-weight: 500;
+
+  color: #fff;
+}
+
+.catalog-form__label {
+  font-size: 16px;
+  line-height: 1;
+  font-weight: 500;
+
+  color: #fff;
+}
+
+.catalog-form__input {
+}
+
+.catalog-form__select {
+  font-size: 16px;
+  line-height: 1;
+  font-weight: 500;
+
+  color: #fff;
+
+  background-color: transparent;
+  border: none;
+}
+
+.ice-cream-catalog {
+  display: flex;
+
+  margin-bottom: 45px;
+}
+
+.ice-cream-catalog__ice-cream-list {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.ice-cream-catalog__item {
+  margin-bottom: 35px;
+}
+
+.pagination {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+
+  padding-bottom: 30px;
+
+  border-bottom: 1px solid #a9bbb1;
+}
+
+.pagination__container {
+  display: flex;
+  flex: 0 1 192px;
+}
+
+.pagination__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 0 1 28px;
+
+  height: 28px;
+
+  font-size: 16px;
+  line-height: 1;
+  font-weight: 500;
+
+  color: #fff;
+
+  text-decoration: none;
+}
+
+.pagination__link--active {
+  color: #353535;
+
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+.pagination__page-before,
+.pagination__page-next {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.pagination__page-before-icon {
+  margin-right: 16px;
+
+  fill: #fff;
+  transform: rotate(180deg);
+}
+
+.pagination__page-next-icon {
+  margin-left: 16px;
+
+  fill: #fff;
+}
+
+/*FOOTER;*/
+
 .main-footer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+
+  margin-top: 18px;
 }
 
 .social-links {
