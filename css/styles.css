@@ -23,6 +23,7 @@
 }
 
 body {
+    margin: 0 auto;
     width: 1200px;
 }
 
@@ -899,9 +900,11 @@ body {
   flex-direction: row;
   flex-wrap: wrap;
   flex: 0 1 auto;
-  width: 875px;
+
+  width: 900px;
 
   margin-bottom: 40px;
+  padding-left: 27px;
 }
 
 .catalog-form__fieldset-container {
@@ -909,6 +912,10 @@ body {
 
   margin-right: 16px;
   margin-bottom: 16px;
+}
+
+.catalog-form__fieldset-container:last-child {
+  margin: 0;
 }
 
 .catalog-form__fieldset {
@@ -928,7 +935,13 @@ body {
   border-radius: 18px;
 }
 
+.catalog-form__container--radio {
+  width: 415px;
+  justify-content: space-evenly;
+}
+
 .catalog-form__legend {
+  margin-left: 15px;
   margin-bottom: 8px;
 
   font-size: 14px;
@@ -950,6 +963,10 @@ body {
 }
 
 .catalog-form__select {
+  height: 36px;
+
+  padding: 0 15px;
+
   font-size: 16px;
   line-height: 1;
   font-weight: 500;
@@ -958,6 +975,213 @@ body {
 
   background-color: transparent;
   border: none;
+  border-radius: 15px;
+}
+
+.catalog-form__select:focus,
+.catalog-form__select:active {
+  color: #000;
+
+  background: #fff;
+  outline: none;
+}
+
+.catalog-form__range {
+  padding: 0 21px;
+}
+
+.form-range {
+  display: flex;
+  flex-direction: row;
+}
+
+.form-range__bar {
+  position: relative;
+
+  width: 176px;
+  height: 4px;
+
+  background-color: #d1dad3;
+}
+
+.form-range__bar-full {
+  width: 107px;
+  height: 4px;
+
+  margin-left: 16px;
+
+  background-color: #f8f7f4;
+}
+
+.form-range__toggle-min,
+.form-range__toggle-max {
+  position: absolute;
+
+  width: 20px;
+  height: 20px;
+
+  background-color: #fff;
+  border-radius: 50%;
+
+  cursor: pointer;
+}
+
+.form-range__toggle-min {
+  top: -8px;
+  left: 16px; 
+}
+
+.form-range__toggle-max {
+  top: -8px;
+  left: 123px;
+}
+
+.form-range__toggle-min::before,
+.form-range__toggle-max::before {
+  position: absolute;
+  content: "";
+
+  width: 4px;
+  height: 4px;
+
+  background-color: #ababab;
+  border-radius: 50%;
+}
+  
+.form-range__toggle-min::before{
+  top: 8px;
+  left: 8px;
+}
+
+.form-range__toggle-max::before{
+  top: 8px;
+  left: 8px;
+}
+
+.catalog-form__label--radio {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  height: 22px;
+
+  flex: 0 0 auto;
+
+  padding-left: 31px;
+
+  cursor: pointer;
+}
+
+.catalog-form__input-radio:not(:checked) + label::before {
+  position: absolute;
+  content: "";
+
+  top: 0;
+  left: 0;
+
+  width: 22px;
+  height: 22px;
+
+  background-image: url("../img/radio-off.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.catalog-form__input-radio:checked + label::before {
+  position: absolute;
+  content: "";
+
+  top: 0;
+  left: 0;
+
+  width: 22px;
+  height: 22px;
+
+  background-image: url("../img/radio-on.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.catalog-form__container--checkbox {
+  width: 702px;
+  justify-content: space-evenly;
+}
+
+.catalog-form__label--checkbox {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  height: 22px;
+
+  flex: 0 0 auto;
+
+  padding-left: 31px;
+
+  font-size: 16px;
+  line-height: 1;
+  font-weight: 500;
+
+  color: #fff;
+
+  cursor: pointer;
+}
+
+.catalog-form__input-checkbox:not(:checked) + label::before {
+  position: absolute;
+  content: "";
+
+  top: 0;
+  left: 0;
+
+  width: 20px;
+  height: 20px;
+
+  background-image: url("../img/checkbox-off.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.catalog-form__input-checkbox:checked + label::before {
+  position: absolute;
+  content: "";
+
+  top: 0;
+  left: 0;
+
+  width: 24px;
+  height: 20px;
+
+  background-image: url("../img/checkbox-on.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.catalog-form__submit-btn {
+  display: flex;
+  justify-content: center;
+  align-self: flex-end;
+
+  width: 140px;
+  height: 36px;
+
+  margin-left: 16px;
+  padding: 0;
+
+  font-size: 16px;
+  line-height: 1;
+  font-weight: 500;
+
+  color: #fff;
+
+  border: 2px solid #fff;
+  background-color: #a6b7ae;
+  border-radius: 18px;
 }
 
 .ice-cream-catalog {
@@ -1149,5 +1373,4 @@ body {
   font-style: normal;
 
   text-decoration: underline #9db1a5;
->>>>>>> da754cb4f2d8e1cf1fae4c3145184d47a2b781c7
 }

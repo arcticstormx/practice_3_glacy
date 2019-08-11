@@ -126,18 +126,17 @@
 
       <h1 class="wrapper catalog-main__title">Сливочное мороженое</h1>
       
-      <form action="#" method="post" class="wrapper catalog-form catalog-main__catalog-form">
-
+      <form action="#" method="post" class="catalog-form catalog-main__catalog-form">
         <div class="catalog-form__fieldset-container">
           <fieldset class="catalog-form__fieldset">
             <legend class="catalog-form__legend">Сортировка:</legend>
             <div class="catalog-form__container">
               <label class="catalog-form__label" for="sort-by"></label>
-              <select class="catalog-form__input catalog-form__select" name="sort-by" id="form-sort-by">
-                <option value="popular">по популярности</option>
-                <option value="cheap">сначала недорогие</option>
-                <option value="expensive">сначала дорогие</option>
-                <option value="fattness">по жирности</option>
+              <select class="catalog-form__select" name="sort-by" id="form-sort-by">
+                <option class="catalog-form__option" value="popular">по популярности</option>
+                <option class="catalog-form__option" value="cheap">сначала недорогие</option>
+                <option class="catalog-form__option" value="expensive">сначала дорогие</option>
+                <option class="catalog-form__option" value="fattness">по жирности</option>
               </select>
             </div>
           </fieldset>
@@ -148,51 +147,50 @@
             <legend class="catalog-form__legend">Цена: 100 руб. - 500 руб.</legend>
             <div class="catalog-form__container">
               <div class="catalog-form__range form-range">
-                <div class="form-range__bar"></div>
-                <i class="form-range__toggle-min"></i>
-                <i class="form-range__toggle-max"></i>
+                <div class="form-range__bar">
+                  <div class="form-range__bar-full"></div>
+                  <i class="form-range__toggle-min"></i>
+                  <i class="form-range__toggle-max"></i>
+                </div>
               </div>
             </div>
           </fieldset>
-          </div>
+        </div>
 
-          <div class="catalog-form__fieldset-container">
-            
+        <div class="catalog-form__fieldset-container">
           <fieldset class="catalog-form__fieldset">
             <legend class="catalog-form__legend">Жирность:</legend>
-            <div class="catalog-form__container">
-              <input class="catalog-form__input catalog-form__input--radio" id="form-radio-fat-0" type="radio" value="0" name="fat[]">
-              <label class="catalog-form__label" for="form-radio-fat-0">0%</label>
-              <input class="catalog-form__input catalog-form__input--radio" id="form-radio-fat<10" type="radio" value="<10" name="fat[]">
-              <label class="catalog-form__label" for="form-radio-fat<10">до 10%</label>
-              <input class="catalog-form__input catalog-form__input--radio" id="form-radio-fat<30" type="radio" value="<30" name="fat[]">
-              <label class="catalog-form__label" for="form-radio-fat<30">до 30%</label>
-              <input class="catalog-form__input catalog-form__input--radio" id="form-radio-fat>30" type="radio" value=">30" name="fat[]">
-              <label class="catalog-form__label" for="form-radio-fat>30">выше 30%</label>
+            <div class="catalog-form__container catalog-form__container--radio">
+              <input class="visually-hidden catalog-form__input-radio" id="form-radio-fat-0" type="radio" value="0" name="fat[]">
+              <label class="catalog-form__label catalog-form__label--radio" for="form-radio-fat-0">0%</label>
+              <input class="visually-hidden catalog-form__input-radio" id="form-radio-fat-10" type="radio" value="<10" name="fat[]">
+              <label class="catalog-form__label catalog-form__label--radio" for="form-radio-fat-10">до 10%</label>
+              <input class="visually-hidden catalog-form__input-radio" id="form-radio-fat-30" type="radio" value="<30" name="fat[]">
+              <label class="catalog-form__label catalog-form__label--radio" for="form-radio-fat-30">до 30%</label>
+              <input class="visually-hidden catalog-form__input-radio" id="form-radio-fat-min30" type="radio" value=">30" name="fat[]">
+              <label class="catalog-form__label catalog-form__label--radio" for="form-radio-fat-min30">выше 30%</label>
             </div>
           </fieldset>
-          </div>
+        </div>
 
-          <div class="catalog-form__fieldset-container">
-            
+        <div class="catalog-form__fieldset-container">
           <fieldset class="catalog-form__fieldset">
             <legend class="catalog-form__legend">Наполнители:</legend>
-            <div class="catalog-form__container">
-              <input class="catalog-form__input catalog-form__input--checkbox" id="form-chkbx-choco" type="checkbox">
-              <label class="catalog-form__label" for="form-chkbx-choco">шоколадные</label>
-              <input class="catalog-form__input catalog-form__input--checkbox" id="form-chkbx-sugar" type="checkbox">
-              <label class="catalog-form__label" for="form-chkbx-sugar">сахарные присыпки</label>
-              <input class="catalog-form__input catalog-form__input--checkbox" id="form-chkbx-fruits" type="checkbox">
-              <label class="catalog-form__label" for="form-chkbx-fruits">фрукты</label>
-              <input class="catalog-form__input catalog-form__input--checkbox" id="form-chkbx-syrop" type="checkbox">
-              <label class="catalog-form__label" for="form-chkbx-syrop">сиропы</label>
-              <input class="catalog-form__input catalog-form__input--checkbox" id="form-chkbx-jam" type="checkbox">
-              <label class="catalog-form__label" for="form-chkbx-jam">джемы</label>
+            <div class="catalog-form__container catalog-form__container--checkbox">
+              <input class="visually-hidden catalog-form__input-checkbox" id="form-chkbx-choco" type="checkbox">
+              <label class="catalog-form__label catalog-form__label--checkbox" for="form-chkbx-choco">шоколадные</label>
+              <input class="visually-hidden catalog-form__input-checkbox" id="form-chkbx-sugar" type="checkbox">
+              <label class="catalog-form__label catalog-form__label--checkbox" for="form-chkbx-sugar">сахарные присыпки</label>
+              <input class="visually-hidden catalog-form__input-checkbox" id="form-chkbx-fruits" type="checkbox">
+              <label class="catalog-form__label catalog-form__label--checkbox" for="form-chkbx-fruits">фрукты</label>
+              <input class="visually-hidden catalog-form__input-checkbox" id="form-chkbx-syrop" type="checkbox">
+              <label class="catalog-form__label catalog-form__label--checkbox" for="form-chkbx-syrop">сиропы</label>
+              <input class="visually-hidden catalog-form__input-checkbox" id="form-chkbx-jam" type="checkbox">
+              <label class="catalog-form__label catalog-form__label--checkbox" for="form-chkbx-jam">джемы</label>
             </div>
           </fieldset>
-          </div>
-
-        <button class="catalog-form__submit-btn" type="submit">Применить</button>
+          <button class="catalog-form__submit-btn" type="submit">Применить</button>
+        </div>
       </form>
         
       <section class="wrapper ice-cream-catalog">
