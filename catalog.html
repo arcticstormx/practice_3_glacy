@@ -44,7 +44,7 @@
           </div>
 
           <ul class="user-nav nav__user">
-            <li class="user-nav__item">
+            <li class="user-nav__item user-nav__item--search">
               <button class="user-nav__btn user-nav__btn--search" aria-label="Поиск">
                 <svg version="1.1" class="user-nav__search-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="17px"
                    height="17px" viewBox="0 0 17 17" enable-background="new 0 0 17 17" xml:space="preserve">
@@ -57,13 +57,13 @@
                 </g>
                 </svg>
               </button>
-              <!-- <div class="user-search">
-                <form action="#" class="user-search__form">
-                  <input type="text" class="user-search__input" placeholder="Что ищем?">
+              <div class="user-search-popup">
+                <form action="#" class="user-search-popup__form">
+                  <input type="text" class="popup-text-input user-search-popup__input" placeholder="Что ищем?">
                 </form>
-              </div> -->
+              </div>
             </li>
-            <li class="user-nav__item">
+            <li class="user-nav__item user-nav__item--login">
               <button class="user-nav__btn user-nav__btn--login" aria-label="Вход в личный кабинет">
                 <svg version="1.1" class="user-nav__login-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                    width="21px" height="19px" viewBox="0 0 21 19" enable-background="new 0 0 21 19" xml:space="preserve">
@@ -75,33 +75,60 @@
                 </svg>
                 Вход
               </button>
-              <!-- <div class="user-login">
-                <form action="#" class="user-login__form">
-                  <input class="user-login__input-email" type="e-mail" placeholder="Электронная почта">
-                  <input class="user-login__input-password" type="password" placeholder="Пароль">
-                  <div class="user-login__button-container">
-                    <button class="basic-btn user-login__button">Войти</button>
-                    <div class="user-login__button-links">
-                      <a class="user-login__link" href="">Забыл пароль?</a>
-                      <a class="user-login__link" href="">Новая регистрация</a>
+              <div class="user-login-popup">
+                <form action="#" class="user-login-popup__form">
+                  <input class="popup-text-input user-login-popup__input-email" type="e-mail" placeholder="Электронная почта">
+                  <input class="popup-text-input user-login-popup__input-password" type="password" placeholder="Пароль">
+                  <div class="user-login-popup__button-container">
+                    <button class="basic-btn user-login-popup__button">Войти</button>
+                    <div class="user-login-popup__button-links">
+                      <a class="user-login-popup__link" href="">Забыл пароль?</a>
+                      <a class="user-login-popup__link" href="">Новая регистрация</a>
                     </div>
                   </div>
                 </form>
               </div>
-            </li> -->
-            <li class="user-nav__item">
+            </li>
+            <li class="user-nav__item user-nav__item--cart">
               <button class="user-nav__btn user-nav__btn--cart" aria-label="Корзина">
-                <svg version="1.1" class="user-nav__cart-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                   width="21px" height="20px" viewBox="0 0 21 20" enable-background="new 0 0 21 20" xml:space="preserve">
-                <g>
-                  <path fill="#FFFFFF" d="M5.657,2.031L5.422,0H0v2h3.64l1.5,13h13.988l1.699-12.969H5.657z M17.372,13H6.922L5.888,4.031h12.66
-                    L17.372,13z"/>
-                  <circle fill="#FFFFFF" cx="6.984" cy="18" r="2"/>
-                  <circle fill="#FFFFFF" cx="15.984" cy="18" r="2"/>
-                </g>
-                </svg>
                 Пусто
               </button>
+              <div class="user-cart-popup">
+                <ul class="user-cart-popup__shopping-list shopping-list">
+                  <li class="shopping-list__item">
+                    <button class="shopping-list__delete-item-btn">
+                      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                         width="11px" height="11px" viewBox="0 0 11 11" enable-background="new 0 0 11 11" xml:space="preserve">
+                      <polygon fill="#231F20" points="10.979,0.728 10.271,0.021 5.5,4.792 0.729,0.021 0.021,0.728 4.793,5.5 0.021,10.271 0.728,10.979 
+                        5.5,6.207 10.271,10.979 10.979,10.271 6.207,5.5 "/>
+                      </svg>
+                    </button>
+                    <img src="" alt="" class="shopping-list__item-picture" width="33" height="33">
+                    <span class="shopping-list__item-name">
+                      Пломбир с апельсиновым джемом
+                    </span>
+                    <span class="shopping-list__item-quantity">1,5 кг х 200 руб.</span>
+                    <span class="shopping-list__item-total">300</span>
+                  </li>
+                  <li class="shopping-list__item">
+                    <button class="shopping-list__delete-item-btn">
+                      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                         width="11px" height="11px" viewBox="0 0 11 11" enable-background="new 0 0 11 11" xml:space="preserve">
+                      <polygon fill="#231F20" points="10.979,0.728 10.271,0.021 5.5,4.792 0.729,0.021 0.021,0.728 4.793,5.5 0.021,10.271 0.728,10.979 
+                        5.5,6.207 10.271,10.979 10.979,10.271 6.207,5.5 "/>
+                      </svg>
+                    </button>
+                    <img src="" alt="" class="shopping-list__item-picture" width="33" height="33">
+                    <span class="shopping-list__item-name">
+                      Клубничный пломбир с присыпкой из белого шоколада
+                    </span>
+                    <span class="shopping-list__item-quantity">1,5 кг х 300 руб.</span>
+                    <span class="shopping-list__item-total">450</span>
+                  </li>
+                </ul>
+                <b class="user-cart-popup__user-total">Итого: 750 руб.</b>
+                <button class="user-cart-popup__order-btn">Оформить заказ</button>
+              </div>
             </li>
           </ul>
         </nav>

@@ -275,6 +275,12 @@ body {
   margin-right: 0;
 }
 
+.user-nav__item--search,
+.user-nav__item--login,
+.user-nav__item--cart {
+  position: relative;
+}
+
 .user-nav__btn {
   display: flex;
   align-items: center;
@@ -290,29 +296,220 @@ body {
 }
 
 .user-nav__btn--search {
-  width: 33px;
-  height: 33px;
+  width: 32px;
+  height: 32px;
 
-  padding: 8px 8px;
+  padding: 7px 7px;
 
   border-radius: 50%;
 }
 
-.user-nav__btn--login {
-  padding: 6px 16px 7px;
-
-  border-radius: 17px;
+.user-nav__btn--search:hover {
+  background: #fff;
 }
 
-.user-nav__btn--cart {
-  padding: 6px 33px 6px 16px;
+.user-nav__btn--search:hover .user-nav__search-icon path {
+  fill: #000;
+}
 
-  border-radius: 17px;
+.user-nav__btn--search:hover + .user-search-popup {
+  display: flex;
+}
+
+.user-nav__btn--login {
+  height: 32px;
+
+  padding: 0 16px;
+
+  border-radius: 16px;
+}
+
+.user-nav__btn--login:hover {
+  color: #000;
+  background: #fff;
+}
+
+.user-nav__btn--login:hover .user-nav__login-icon path,
+.user-nav__btn--login:hover .user-nav__login-icon polygon {
+  fill: #000;
+}
+
+.user-nav__btn--login:hover + .user-login-popup {
+  display: flex;
 }
 
 .user-nav__login-icon,
 .user-nav__cart-icon {
   margin-right: 8px;
+}
+
+.user-nav__btn--cart {
+  height: 32px;
+
+  padding: 0 33px 0 16px;
+
+  border-radius: 16px;
+}
+
+.user-nav__btn--cart:hover {
+  color: #000;
+  background: #fff;
+}
+
+.user-nav__btn--cart:hover .user-cart-popup {
+  display: flex;
+}
+
+.user-nav__btn--cart:hover.user-nav__btn--cart::before {
+  background-image: url("../img/cart-full.svg");
+}
+
+.user-nav__btn--cart::before {
+  content: "";
+
+  width: 21px;
+  height: 20px;
+
+  margin-right: 8px;
+
+  background-image: url("../img/cart.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+
+.popup-text-input {
+  display: flex;
+  flex: 1 1 auto;
+
+  margin: auto;
+  padding: 0;
+  padding-left: 14px;
+
+  height: 42px;
+
+  border: 1px solid rgb(211, 211, 210);
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+.user-search-popup {
+  position: absolute;
+
+  top: 37px;
+  right: 0;
+
+  display: none;
+  
+  width: 301px;
+  height: 84px;
+
+  padding: 0 15px;
+
+  z-index: 10;
+
+  background-color: rgb(248, 247, 244);
+  box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
+  border-radius: 6px;
+}
+
+.user-search-popup__form {
+  display: flex;
+  flex: 1 1 auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.user-search-popup__input {
+}
+
+
+.user-login-popup {
+  position: absolute;
+
+  display: none;
+
+  top: 36px;
+  right: 0;
+
+  width: 239px;
+  height: 214px;
+
+  padding: 0 19px;
+
+  z-index: 10;
+
+  background-color: rgb(248, 247, 244);
+  box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
+  border-radius: 6px;
+}
+
+.user-login-popup__form {
+  display: flex;
+  flex-flow: row wrap;
+  align-content: space-evenly;
+  flex: 1 1 auto;
+}
+
+.user-login-popup__button-container {
+  display: flex;
+  justify-content: space-between;
+  flex: 1 1 auto;
+}
+ 
+.user-login-popup__button-links {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.user-login-popup__link {
+  font-size: 13px;
+  line-height: 1;
+  font-weight: 400;
+
+  color: #323232;
+
+  text-decoration: underline #adacaa;
+}
+
+.user-cart-popup {
+  position: absolute;
+
+  display: flex;
+
+  width: 539px;
+  height: 242px;
+
+  right: 0;
+  top: 36px;
+
+  z-index: 10;
+
+  background-color: rgb(248, 247, 244);
+  box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
+  border-radius: 5px;
+}
+
+.shopping-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.shopping-list__item {
+  display: flex;
+  flex-direction: row;
+}
+
+.shopping-list__delete-item-btn {
+  border: none;
+  background: transparent;
+}
+
+.shopping-list__item-picture {
+  width: 33px;
+  height: 33px;
 }
 
 .contacts-aside {
@@ -322,8 +519,6 @@ body {
 
   right: 0;
   top: 74px;
-
-
 }
 
 .contacts-aside__schedule {
@@ -957,9 +1152,6 @@ body {
   font-weight: 500;
 
   color: #fff;
-}
-
-.catalog-form__input {
 }
 
 .catalog-form__select {
