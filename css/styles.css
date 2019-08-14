@@ -50,7 +50,7 @@ body {
 }
 
 .catalog-body {
-  background-color: #9aaea3;
+  background-color: #90a69a;
 }
 
 .index-body,
@@ -96,22 +96,24 @@ body {
 
 .main-header {
   position: relative;
+
   display: flex;
   flex-direction: row;
-
   flex: 1;
+
+  p
 }
 
 .nav {
   display: flex;
   justify-content: space-between;
-
   flex: 2;
-
 }
 
 .nav__logo {
   margin-right: 24px;
+  padding-top: 9px;
+
 }
 
 .pages-list-container {
@@ -394,6 +396,10 @@ body {
   border-radius: 5px;
 }
 
+.popup-text-input:hover {
+  border: 2px solid rgb(154, 154, 154);
+}
+
 .user-search-popup {
   position: absolute;
 
@@ -592,7 +598,7 @@ body {
   display: flex;
   flex-direction: column;
 
-  right: 0;
+  right: 27px;
   top: 74px;
 }
 
@@ -1116,6 +1122,7 @@ body {
   flex-direction: row;
 
   margin: 0;
+  margin-bottom: 10px;
 
   list-style: none;
 }
@@ -1155,6 +1162,9 @@ body {
 }
 
 .catalog-main__title {
+  margin: 0;
+  margin-bottom: 32px;
+
   font-size: 35px;
   line-height: 1;
   font-weight: 700;
@@ -1451,6 +1461,17 @@ body {
   border-radius: 18px;
 }
 
+.catalog-form__submit-btn:hover {
+  color: #000;
+  background-color: #fff;
+}
+
+.catalog-form__submit-btn:active {
+  background-color: rgb(237, 237, 237);
+  box-shadow: inset 0px 2px 1px 0px rgba(105, 105, 105);
+  border: none;
+}
+
 .ice-cream-catalog {
   display: flex;
 
@@ -1497,13 +1518,23 @@ body {
   color: #fff;
 
   text-decoration: none;
+  border-radius: 50%;
+}
+
+.pagination__link:not(.pagination__link--active):hover {
+  background-color: #9db1a5;
+}
+
+.pagination__link:active {
+  color: #353535;
+
+  background-color: #fff;
 }
 
 .pagination__link--active {
   color: #353535;
 
   background-color: #fff;
-  border-radius: 50%;
 }
 
 .pagination__page-before,
@@ -1536,6 +1567,7 @@ body {
   align-items: center;
 
   margin-top: 18px;
+  margin-bottom: 26px;
 }
 
 .social-links {
@@ -1584,6 +1616,13 @@ body {
   color: #fff;
 
   text-decoration: underline #9db1a5;
+}
+
+.footer-nav__link:hover,
+.footer-nav__link:active {
+  color: #ffbc9e;
+  text-decoration: underline #ffbc9e;
+  
 }
 
 .footer-nav__link:first-child {
