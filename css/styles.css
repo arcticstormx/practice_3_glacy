@@ -90,6 +90,17 @@ body {
   padding-right: 15px;
 }
 
+.basic-white-link:hover,
+.basic-white-link:active {
+  color: #ffbc9e;
+  text-decoration: underline #ffbc9e;
+}
+
+.basic-black-link:hover,
+.basic-black-link:active {
+  color: #e84d37;
+  text-decoration: underline #e84d37;
+}
 
 /*HEADER*/
 
@@ -100,8 +111,6 @@ body {
   display: flex;
   flex-direction: row;
   flex: 1;
-
-  p
 }
 
 .nav {
@@ -112,8 +121,7 @@ body {
 
 .nav__logo {
   margin-right: 24px;
-  padding-top: 9px;
-
+  margin-top: 9px;
 }
 
 .pages-list-container {
@@ -1172,6 +1180,10 @@ body {
   color: #fff;
 }
 
+
+/*CATALOG ФИЛЬТР*/
+
+
 .catalog-form {
 }
 
@@ -1255,8 +1267,9 @@ body {
   border-radius: 15px;
 }
 
-.catalog-form__select:focus,
-.catalog-form__select:active {
+
+.catalog-form__select:hover,
+.catalog-form__select:focus {
   color: #000;
 
   background: #fff;
@@ -1349,6 +1362,10 @@ body {
   cursor: pointer;
 }
 
+.catalog-form__label--radio:hover {
+  opacity: 1;
+}
+
 .catalog-form__input-radio:not(:checked) + label::before {
   position: absolute;
   content: "";
@@ -1358,6 +1375,8 @@ body {
 
   width: 22px;
   height: 22px;
+
+  opacity: 0.8;
 
   background-image: url("../img/radio-off.svg");
   background-repeat: no-repeat;
@@ -1375,10 +1394,16 @@ body {
   width: 22px;
   height: 22px;
 
+  opacity: 0.8;
+
   background-image: url("../img/radio-on.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
+}
+
+.catalog-form__input-radio:disabled + label::before {
+  opacity: 0.4;
 }
 
 .catalog-form__container--checkbox {
@@ -1417,6 +1442,8 @@ body {
   width: 20px;
   height: 20px;
 
+  opacity: 0.8;
+
   background-image: url("../img/checkbox-off.svg");
   background-repeat: no-repeat;
   background-position: center;
@@ -1433,10 +1460,16 @@ body {
   width: 24px;
   height: 20px;
 
+  opacity: 0.8;
+
   background-image: url("../img/checkbox-on.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
+}
+
+.catalog-form__input-checkbox:disabled + label::before {
+  opacity: 0.4;
 }
 
 .catalog-form__submit-btn {
@@ -1521,7 +1554,7 @@ body {
   border-radius: 50%;
 }
 
-.pagination__link:not(.pagination__link--active):hover {
+.pagination__link:hover {
   background-color: #9db1a5;
 }
 
@@ -1616,13 +1649,6 @@ body {
   color: #fff;
 
   text-decoration: underline #9db1a5;
-}
-
-.footer-nav__link:hover,
-.footer-nav__link:active {
-  color: #ffbc9e;
-  text-decoration: underline #ffbc9e;
-  
 }
 
 .footer-nav__link:first-child {
