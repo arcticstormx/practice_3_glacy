@@ -6,8 +6,12 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/styles.css">
 </head>
-<body class="index-body">
-    <header class="wrapper main-header">
+<body>
+  <input class="visually-hidden" type="radio" id="slider-1">
+  <input class="visually-hidden" type="radio" id="slider-2">
+  <input class="visually-hidden" type="radio" id="slider-3">
+  <div class="site-wrapper">
+      <header class="wrapper main-header">
         <nav class="nav main-header__nav">
           <div class="pages-list-container">
             <div class="logo nav__logo">
@@ -17,7 +21,7 @@
             </div>
             <ul class="pages-list nav__pages-list">
               <li class="pages-list__item catalog-popup-show">
-                <a class="pages-list__link pages-list__link--active popup-nav-btn" href="#">Каталог</a>
+                <a class="pages-list__link pages-list__link--active popup-nav-btn" href="catalog.html">Каталог</a>
                 <ul class="popup-nav">
                   <li class="popup-nav__link__header">Новинки</li>
                   <li class="popup-nav__link">
@@ -182,28 +186,28 @@
       <section class="wrapper ice-cream-hits">
         <ul class="ice-cream-list ice-cream-hits__ice-cream-list">
           <li class="ice-cream-list__item ice-cream-list__item--hit">
-            <img src="img/flavour-1.png" alt="Мороженое" class="ice-cream-list__item-image" width="267" height="267">
+            <img src="img/flavor-1.png" alt="Мороженое" class="ice-cream-list__item-image" width="267" height="267">
             <span class="ice-cream-list__item-price">310 &#8381;/кг</span>
             <p class="ice-cream-list__desc">
               Сливочное с апельсиновым джемом и цитрусовой стружкой
             </p>
           </li>
           <li class="ice-cream-list__item ice-cream-list__item--hit">
-            <img src="img/flavour-2.png" alt="Мороженое" class="ice-cream-list__item-image" width="267" height="267">
+            <img src="img/flavor-2.png" alt="Мороженое" class="ice-cream-list__item-image" width="267" height="267">
             <span class="ice-cream-list__item-price">380 &#8381;/кг</span>
             <p class="ice-cream-list__desc">
               Сливочно-кофейное с кусочками шоколада
             </p>
           </li>
           <li class="ice-cream-list__item ice-cream-list__item--hit">
-            <img src="img/flavour-3.png" alt="Мороженое" class="ice-cream-list__item-image" width="267" height="267">
+            <img src="img/flavor-3.png" alt="Мороженое" class="ice-cream-list__item-image" width="267" height="267">
             <span class="ice-cream-list__item-price">355 &#8381;/кг</span>
             <p class="ice-cream-list__desc">
               Сливочно-клубничное с присыпкой из белого шоколада
             </p>
           </li>
           <li class="ice-cream-list__item ice-cream-list__item--hit">
-            <img src="img/flavour-4.png" alt="Мороженое" class="ice-cream-list__item-image" width="267" height="267">
+            <img src="img/flavor-4.png" alt="Мороженое" class="ice-cream-list__item-image" width="267" height="267">
             <span class="ice-cream-list__item-price">415 &#8381;/кг</span>
             <p class="ice-cream-list__desc">
               Сливочное крем-брюле с карамельной подливкой
@@ -239,7 +243,7 @@
           <span class="blog-block__headline">
             Новое в нашем блоге
           </span>
-          <a class="basic-black-link blog-block__title">
+          <a class="basic-black-link blog-block__title" href="">
             10 способов сервировки фруктовых щербетов к столу
           </a>
         </div>
@@ -353,13 +357,13 @@
 
       <div class="footer-nav main-footer__footer-nav">
         <div class="footer-nav__container">
-          <a class="footer-nav__link footer-nav__link--suppliers" href="">Для поставщиков</a>
-          <a class="footer-nav__link" href="">О производстве</a>
+          <a class="basic-white-link footer-nav__link footer-nav__link--suppliers" href="">Для поставщиков</a>
+          <a class="basic-white-link footer-nav__link" href="">О производстве</a>
           
         </div>
         <div class="footer-nav__container">
-          <a class="footer-nav__link" href="">Наши документы</a>
-          <a class="footer-nav__link" href="">Экологические стандарты</a>
+          <a class="basic-white-link footer-nav__link" href="">Наши документы</a>
+          <a class="basic-white-link footer-nav__link" href="">Экологические стандарты</a>
           
         </div>
       </div>
@@ -371,12 +375,13 @@
         <span class="copyright__name">Сделано в <i class="copyright__name-company">HTML Academy</i> &#169; 2017</span>
       </div>
     </footer>
-    <section class="modal">
+    <!-- <section class="modal">
       <b class="modal__header">Мы обязательно вам ответим!</b>
       <input class="modal__user-name" name="user-name" type="text" placeholder="Как вас зовут?">
       <input class="modal__user-email" name="user-email" type="e-mail" placeholder="Ваша почта для ответа?">
       <textarea class="modal__user-comment" name="user-comment" cols="30" rows="10" placeholder="Напишите что-нибудь...">
       </textarea>
-    </section>
+    </section> -->
+  </div>
 </body>
 </html>

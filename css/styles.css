@@ -1,30 +1,31 @@
 @font-face {
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto";
   src: url("../fonts/roboto.woff2") format("woff2"),
-    url("../fonts/roboto.woff") format("woff");
+  url("../fonts/roboto.woff") format("woff");
   font-style: normal;
   font-weight: 400;
 }
 
 @font-face {
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto";
   src: url("../fonts/robotomedium.woff2") format("woff2"),
-    url("../fonts/robotomedium.woff") format("woff");
+  url("../fonts/robotomedium.woff") format("woff");
   font-style: normal;
   font-weight: 500;
 }
 
 @font-face {
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto";
   src: url("../fonts/robotobold.woff2") format("woff2"),
-    url("../fonts/robotobold.woff") format("woff");
+  url("../fonts/robotobold.woff") format("woff");
   font-style: normal;
   font-weight: 700;
 }
 
 body {
+    font-family: "Roboto", "Arial", sans-serif;
     margin: 0 auto;
-    width: 1200px;
+    min-width: 1200px;
 }
 
 .visually-hidden {
@@ -55,7 +56,7 @@ body {
 
 .index-body,
 .catalog-body {
-  font-family: "Roboto", sans-serif;
+  font-family:;
   font-weight: 400;
 }
 
@@ -74,7 +75,19 @@ body {
   background: linear-gradient(#f26843, #e74a35);
   box-shadow: 0 2px rgba(172, 16, 0, 0.64);
 
+  cursor: pointer;
 }
+
+.basic-btn:hover {
+  box-shadow: 0 2px rgba(172, 16, 0, 0.64), 
+    inset 0 0 100px 100px rgba(255, 255, 255, 0.2);
+}
+
+.basic-btn:active {
+  background: linear-gradient(#e74a35, #f26843);
+  box-shadow: inset 0px 2px 2px 0px rgba(148, 39, 24, 0.64);
+}
+
 
 .basic-btn--slider {
   padding: 15px 40px 17px;
@@ -671,7 +684,7 @@ body {
   width: 647px;
   height: 584px;
 
-  background-image: url("../img/ice-cream-pair-1.png");
+  background-image: url("../img/slider-1.png");
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -683,6 +696,7 @@ body {
 
   font-size: 60px;
   line-height: 74px;
+  font-weight: 700;
 
   color: #fff;
 }
@@ -801,6 +815,7 @@ body {
 }
 
 .ice-cream-list__desc {
+  display: inline;
   margin: 0;
 
   text-align: center;
@@ -811,7 +826,8 @@ body {
 
   color: #fff;
 
-  text-decoration: underline #9db1a5;
+  /*text-decoration: underline #9db1a5;*/
+  border-bottom: 1px solid #9db1a5;
 }
 
 .ice-cream-list__btn {
@@ -1265,6 +1281,8 @@ body {
   background-color: transparent;
   border: none;
   border-radius: 15px;
+
+  -webkit-appearance: none;
 }
 
 
@@ -1362,9 +1380,6 @@ body {
   cursor: pointer;
 }
 
-.catalog-form__label--radio:hover {
-  opacity: 1;
-}
 
 .catalog-form__input-radio:not(:checked) + label::before {
   position: absolute;
@@ -1406,6 +1421,10 @@ body {
   opacity: 0.4;
 }
 
+.catalog-form__input-radio + label:hover::before {
+  opacity: 1;
+}
+
 .catalog-form__container--checkbox {
   width: 702px;
   justify-content: space-evenly;
@@ -1416,10 +1435,9 @@ body {
 
   display: flex;
   align-items: center;
+  flex: 0 0 auto;
 
   height: 22px;
-
-  flex: 0 0 auto;
 
   padding-left: 31px;
 
@@ -1472,6 +1490,10 @@ body {
   opacity: 0.4;
 }
 
+.catalog-form__input-checkbox + label:hover::before {
+  opacity: 1;
+}
+
 .catalog-form__submit-btn {
   display: flex;
   justify-content: center;
@@ -1492,6 +1514,8 @@ body {
   border: 2px solid #fff;
   background-color: #a6b7ae;
   border-radius: 18px;
+
+  cursor: pointer;
 }
 
 .catalog-form__submit-btn:hover {
@@ -1616,17 +1640,28 @@ body {
 }
 
 .social-links__link {
+  position: relative;
+
   display: flex;
 }
 
 .social-links__link-self {
   display: flex;
+
+  opacity: 0.8;
+
+  border-radius: 50%;
 }
 
 .social-links__icon {
   border: 3px solid #c2cec7;
   border-radius: 50%;
 }
+
+.social-links__link-self:hover {
+  opacity: 1;
+}
+
 
 .footer-nav {
   display: flex;
