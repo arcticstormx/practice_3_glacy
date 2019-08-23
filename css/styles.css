@@ -22,6 +22,8 @@
   font-weight: 700;
 }
 
+/*Глобальные стили и кнопки*/
+
 body {
     font-family: "Roboto", "Arial", sans-serif;
     margin: 0 auto;
@@ -37,16 +39,20 @@ body {
 }
 
 .wrapper {
-  padding-left: 27px;
-  padding-right: 27px;
+  width: 1146px;
+  margin: 0 auto;
+  padding: 0 27px;
 }
 
-.wrapper-margin {
-  margin-left: 27px;
-  margin-right: 27px;
+.site-wrapper {
+  background: no-repeat center top url("../img/backgrounds/slider-1.png");
+
+  background-color: #849d8f;
 }
 
-.index-body {
+#slider-1:checked ~ .site-wrapper {
+  background: no-repeat center top url("../img/backgrounds/slider-1.png");
+
   background-color: #849d8f;
 }
 
@@ -133,7 +139,7 @@ body {
 }
 
 .nav__logo {
-  margin-right: 24px;
+  margin-right: 10px;
   margin-top: 9px;
 }
 
@@ -155,7 +161,6 @@ body {
 }
 
 .pages-list__item {
-  margin-right: 28px;
   padding: 9px 14px;
 }
 
@@ -190,13 +195,19 @@ body {
 
 .pages-list__link {
   font-size: 16px;
-  line-height: 16px;
+  line-height: 18px;
   font-weight: 700;
 
   color: #fff;
 
   text-decoration: none;
-  border-bottom: 1px solid #b3cbbd;
+}
+
+.pages-list__link::after {
+  content: "";
+  display: block;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 .popup-nav {
@@ -384,7 +395,7 @@ body {
 }
 
 .user-nav__btn--cart:hover.user-nav__btn--cart::before {
-  background-image: url("../img/cart-full.svg");
+  background-image: url("../img/icons/cart-full.svg");
 }
 
 .user-nav__btn--cart::before {
@@ -395,7 +406,7 @@ body {
 
   margin-right: 8px;
 
-  background-image: url("../img/cart.svg");
+  background-image: url("../img/icons/cart.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -624,7 +635,7 @@ body {
 }
 
 .contacts-aside__schedule {
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 
   text-align: right;
 
@@ -684,7 +695,7 @@ body {
   width: 647px;
   height: 584px;
 
-  background-image: url("../img/slider-1.png");
+  background-image: url("../img/content/slider-1.png");
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -720,14 +731,14 @@ body {
 }
 
 .promotion-block--raspberry {
-  background-image: url("../img/raspberry-back.png");
+  background-image: url("../img/backgrounds/raspberry-back.png");
   background-repeat: no-repeat;
   background-position: center;
 
 }
 
 .promotion-block--chocolate {
-  background-image: url("../img/chocolate-back.png");
+  background-image: url("../img/backgrounds/chocolate-back.png");
   background-repeat: no-repeat;
   background-position: center;
 
@@ -790,7 +801,7 @@ body {
   width: 61px;
   height: 61px;
 
-  background-image: url("../img/hit-cloud.svg");
+  background-image: url("../img/icons/hit-cloud.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -842,7 +853,7 @@ body {
   padding: 20px 28px 21px 24px;
 
   border-radius: 15px;
-  background-image: url("../img/waffle-pattern.jpg");
+  background-image: url("../img/backgrounds/waffle-pattern.jpg");
   background-repeat: repeat;
   background-clip: padding-box;
 }
@@ -897,7 +908,7 @@ body {
   width: 49px;
   height: 49px;
 
-  background-image: url("../img/ice-cream-icon.svg");
+  background-image: url("../img/icons/ice-cream-icon.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -912,7 +923,7 @@ body {
   width: 49px;
   height: 49px;
 
-  background-image: url("../img/cow-icon.svg");
+  background-image: url("../img/icons/cow-icon.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -926,7 +937,7 @@ body {
   width: 49px;
   height: 49px;
 
-  background-image: url("../img/leaf-icon.svg");
+  background-image: url("../img/icons/leaf-icon.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -940,7 +951,7 @@ body {
   width: 49px;
   height: 49px;
 
-  background-image: url("../img/temp-icon.svg");
+  background-image: url("../img/icons/temp-icon.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -962,7 +973,7 @@ body {
   padding: 26px 240px 26px 19px;
 
   background: #fff;
-  background-image: url("../img/strawberry-back.jpg");
+  background-image: url("../img/backgrounds/strawberry-back.png");
   background-repeat: no-repeat;
   background-position: 2px 0;
   border-radius: 12px;
@@ -995,7 +1006,7 @@ body {
   
   padding: 6px;
 
-  background-image: url("../img/stripes-back.svg");
+  background-image: url("../img/backgrounds/stripes-back.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -1009,7 +1020,7 @@ body {
 
   padding: 26px 20px 35px;
 
-  background-image: url("../img/gray-back.jpg");
+  background-image: url("../img/backgrounds/gray-back.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -1061,7 +1072,7 @@ body {
 
   margin-bottom: 20px;
 
-  background-image: url("../img/map.jpg");
+  background-image: url("../img/content/map.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: auto auto;
@@ -1393,7 +1404,7 @@ body {
 
   opacity: 0.8;
 
-  background-image: url("../img/radio-off.svg");
+  background-image: url("../img/icons/radio-off.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -1411,7 +1422,7 @@ body {
 
   opacity: 0.8;
 
-  background-image: url("../img/radio-on.svg");
+  background-image: url("../img/icons/radio-on.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -1462,7 +1473,7 @@ body {
 
   opacity: 0.8;
 
-  background-image: url("../img/checkbox-off.svg");
+  background-image: url("../img/icons/checkbox-off.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -1480,7 +1491,7 @@ body {
 
   opacity: 0.8;
 
-  background-image: url("../img/checkbox-on.svg");
+  background-image: url("../img/icons/checkbox-on.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -1706,7 +1717,7 @@ body {
   width: 15px;
   height: 13px;
 
-  background-image: url("../img/heart.svg");
+  background-image: url("../img/icons/heart.svg");
   background-repeat: no-repeat;
   background-position: center;
 }

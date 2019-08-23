@@ -7,16 +7,16 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <input class="visually-hidden" type="radio" id="slider-1">
+  <input class="visually-hidden" type="radio" id="slider-1" checked>
   <input class="visually-hidden" type="radio" id="slider-2">
   <input class="visually-hidden" type="radio" id="slider-3">
   <div class="site-wrapper">
-      <header class="wrapper main-header">
+    <header class="wrapper main-header">
         <nav class="nav main-header__nav">
           <div class="pages-list-container">
             <div class="logo nav__logo">
               <a class="logo__link" href="index.html">
-                <img class="logo__self" src="img/gllacy-logo.svg" alt="Glacy logo" width="154" height="64">
+                <img class="logo__self" src="img/icons/gllacy-logo.svg" alt="Glacy logo" width="154" height="64">
               </a>
             </div>
             <ul class="pages-list nav__pages-list">
@@ -110,15 +110,6 @@
             </li> -->
             <li class="user-nav__item">
               <button class="user-nav__btn user-nav__btn--cart" aria-label="Корзина">
-                <svg version="1.1" class="user-nav__cart-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                   width="21px" height="20px" viewBox="0 0 21 20" enable-background="new 0 0 21 20" xml:space="preserve">
-                <g>
-                  <path fill="#FFFFFF" d="M5.657,2.031L5.422,0H0v2h3.64l1.5,13h13.988l1.699-12.969H5.657z M17.372,13H6.922L5.888,4.031h12.66
-                    L17.372,13z"/>
-                  <circle fill="#FFFFFF" cx="6.984" cy="18" r="2"/>
-                  <circle fill="#FFFFFF" cx="15.984" cy="18" r="2"/>
-                </g>
-                </svg>
                 Пусто
               </button>
             </li>
@@ -130,138 +121,139 @@
         </div>
     </header>
 
-    <main class="index-main">
+    <main>
       <h1 class="visually-hidden">Магазин мороженого Глэйси</h1>
+      <div class="wrapper">
+        <section class="slider index-main__slider">
+          <h2 class="visually-hidden">Слайдер</h2>
 
-      <section class="slider index-main__slider">
-        <h2 class="visually-hidden">Слайдер</h2>
+          <div class="slider-controls slider__controls">
+            <i class="slider-controls__btn"></i>
+            <i class="slider-controls__btn"></i>
+            <i class="slider-controls__btn"></i>
+          </div>
 
-        <div class="slider-controls slider__controls">
-          <i class="slider-controls__btn"></i>
-          <i class="slider-controls__btn"></i>
-          <i class="slider-controls__btn"></i>
-        </div>
+          <ul class="slider-list slider__slider-list">
+            <li class="slider-list__item">
+              <b class="slider-list__item-title">
+                Крем-брюле и пломбир с малиновым джемом
+              </b>
+              <button class="basic-btn basic-btn--slider slider__order-btn" type="button">Давайте оба!</button>
+            </li>
+            <!-- <li class="slider-list__item">
+              
+              <b class="slider-list__item-title">
+                Шоколадный пломбир и лимонный сорбет
+              </b>
+              <button class="basic-btn basic-btn--slider slider__order-btn" type="button">Давайте оба!</button>
+            </li>
+            <li class="slider-list__item">
+              
+              <b class="slider-list__item-title">
+                Пломбир с помадкой и клубничный щербет
+              </b>
+              <button class="basic-btn basic-btn--slider slider__order-btn" type="button">Давайте оба!</button>
+            </li> -->
+          </ul>
+        </section>
 
-        <ul class="slider-list slider__slider-list">
-          <li class="slider-list__item">
-            <b class="slider-list__item-title">
-              Крем-брюле и пломбир с малиновым джемом
-            </b>
-            <button class="basic-btn basic-btn--slider slider__order-btn" type="button">Давайте оба!</button>
-          </li>
-          <!-- <li class="slider-list__item">
-            
-            <b class="slider-list__item-title">
-              Шоколадный пломбир и лимонный сорбет
-            </b>
-            <button class="basic-btn basic-btn--slider slider__order-btn" type="button">Давайте оба!</button>
-          </li>
-          <li class="slider-list__item">
-            
-            <b class="slider-list__item-title">
-              Пломбир с помадкой и клубничный щербет
-            </b>
-            <button class="basic-btn basic-btn--slider slider__order-btn" type="button">Давайте оба!</button>
-          </li> -->
-        </ul>
-      </section>
-
-      <section class="wrapper promotion">
-        <div class="promotion-block promotion-block--raspberry promotion__item">
-          <b class="promotion-block__title">Малинка даром!</b>
-          <p class="promotion-block__paragraph">
-            При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.
-          </p>
-          <a class="basic-btn promotion-block__link" href="#">Хочу варенье!</a>
-        </div>
-        <div class="promotion-block promotion-block--chocolate promotion__item">
-          <b class="promotion-block__title">Шоколадки даром!</b>
-          <p class="promotion-block__paragraph">
-            При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.
-          </p>
-          <a class="basic-btn promotion-block__link" href="#">Хочу шоколадки!</a>
-        </div>
-      </section>
-
-      <section class="wrapper ice-cream-hits">
-        <ul class="ice-cream-list ice-cream-hits__ice-cream-list">
-          <li class="ice-cream-list__item ice-cream-list__item--hit">
-            <img src="img/flavor-1.png" alt="Мороженое" class="ice-cream-list__item-image" width="267" height="267">
-            <span class="ice-cream-list__item-price">310 &#8381;/кг</span>
-            <p class="ice-cream-list__desc">
-              Сливочное с апельсиновым джемом и цитрусовой стружкой
+        <section class="promotion">
+          <div class="promotion-block promotion-block--raspberry promotion__item">
+            <b class="promotion-block__title">Малинка даром!</b>
+            <p class="promotion-block__paragraph">
+              При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.
             </p>
-          </li>
-          <li class="ice-cream-list__item ice-cream-list__item--hit">
-            <img src="img/flavor-2.png" alt="Мороженое" class="ice-cream-list__item-image" width="267" height="267">
-            <span class="ice-cream-list__item-price">380 &#8381;/кг</span>
-            <p class="ice-cream-list__desc">
-              Сливочно-кофейное с кусочками шоколада
+            <a class="basic-btn promotion-block__link" href="#">Хочу варенье!</a>
+          </div>
+          <div class="promotion-block promotion-block--chocolate promotion__item">
+            <b class="promotion-block__title">Шоколадки даром!</b>
+            <p class="promotion-block__paragraph">
+              При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.
             </p>
-          </li>
-          <li class="ice-cream-list__item ice-cream-list__item--hit">
-            <img src="img/flavor-3.png" alt="Мороженое" class="ice-cream-list__item-image" width="267" height="267">
-            <span class="ice-cream-list__item-price">355 &#8381;/кг</span>
-            <p class="ice-cream-list__desc">
-              Сливочно-клубничное с присыпкой из белого шоколада
-            </p>
-          </li>
-          <li class="ice-cream-list__item ice-cream-list__item--hit">
-            <img src="img/flavor-4.png" alt="Мороженое" class="ice-cream-list__item-image" width="267" height="267">
-            <span class="ice-cream-list__item-price">415 &#8381;/кг</span>
-            <p class="ice-cream-list__desc">
-              Сливочное крем-брюле с карамельной подливкой
-            </p>
-          </li>
-        </ul>
-      </section>
+            <a class="basic-btn promotion-block__link" href="#">Хочу шоколадки!</a>
+          </div>
+        </section>
 
-      <section class="wrapper-margin about-us index-main__about-us">
-        <h2 class="about-us__header">
-          Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес
-        </h2>
-        <div class="about-us__container">
-          <p class="about-us__feature-text about-us__feature-text--ice-cream">
-            Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.
-          </p>
-          <p class="about-us__feature-text about-us__feature-text--cow">
-            Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.
-          </p>
-        </div>
-        <div class="about-us__container">
-          <p class="about-us__feature-text about-us__feature-text--leaf">
-            Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.
-          </p>
-          <p class="about-us__feature-text about-us__feature-text--temp">
-            Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.
-          </p>
-        </div>
-      </section>
+        <section class="ice-cream-hits">
+          <ul class="ice-cream-list ice-cream-hits__ice-cream-list">
+            <li class="ice-cream-list__item ice-cream-list__item--hit">
+              <img src="img/content/flavor-1.png" alt="Мороженое" class="ice-cream-list__item-image" width="267" height="267">
+              <span class="ice-cream-list__item-price">310 &#8381;/кг</span>
+              <p class="ice-cream-list__desc">
+                Сливочное с апельсиновым джемом и цитрусовой стружкой
+              </p>
+            </li>
+            <li class="ice-cream-list__item ice-cream-list__item--hit">
+              <img src="img/content/flavor-2.png" alt="Мороженое" class="ice-cream-list__item-image" width="267" height="267">
+              <span class="ice-cream-list__item-price">380 &#8381;/кг</span>
+              <p class="ice-cream-list__desc">
+                Сливочно-кофейное с кусочками шоколада
+              </p>
+            </li>
+            <li class="ice-cream-list__item ice-cream-list__item--hit">
+              <img src="img/content/flavor-3.png" alt="Мороженое" class="ice-cream-list__item-image" width="267" height="267">
+              <span class="ice-cream-list__item-price">355 &#8381;/кг</span>
+              <p class="ice-cream-list__desc">
+                Сливочно-клубничное с присыпкой из белого шоколада
+              </p>
+            </li>
+            <li class="ice-cream-list__item ice-cream-list__item--hit">
+              <img src="img/content/flavor-4.png" alt="Мороженое" class="ice-cream-list__item-image" width="267" height="267">
+              <span class="ice-cream-list__item-price">415 &#8381;/кг</span>
+              <p class="ice-cream-list__desc">
+                Сливочное крем-брюле с карамельной подливкой
+              </p>
+            </li>
+          </ul>
+        </section>
 
-      <section class="wrapper news">
-        <div class="blog-block news__blog-block">
-          <span class="blog-block__headline">
-            Новое в нашем блоге
-          </span>
-          <a class="basic-black-link blog-block__title" href="">
-            10 способов сервировки фруктовых щербетов к столу
-          </a>
-        </div>
-
-        <div class="subscribe-block news__subscribe-block">
-          <div class="subscribe-block__container">
-            <p class="subscribe-block__text">
-              Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =) 
+        <section class="about-us index-main__about-us">
+          <h2 class="about-us__header">
+            Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес
+          </h2>
+          <div class="about-us__container">
+            <p class="about-us__feature-text about-us__feature-text--ice-cream">
+              Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.
             </p>
-            <div class="subscribe-block__form-container">
-              <form id="subscribe-user-form" action="#">
-                <input class="subscribe-block__email-input" type="email" placeholder="Электронная почта">
-                <button class="basic-btn basic-btn--submit-email subscribe-block__sub-btn" type="submit">Отправить</button>
-              </form>
+            <p class="about-us__feature-text about-us__feature-text--cow">
+              Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.
+            </p>
+          </div>
+          <div class="about-us__container">
+            <p class="about-us__feature-text about-us__feature-text--leaf">
+              Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.
+            </p>
+            <p class="about-us__feature-text about-us__feature-text--temp">
+              Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.
+            </p>
+          </div>
+        </section>
+
+        <section class="news">
+          <div class="blog-block news__blog-block">
+            <span class="blog-block__headline">
+              Новое в нашем блоге
+            </span>
+            <a class="basic-black-link blog-block__title" href="">
+              10 способов сервировки фруктовых щербетов к столу
+            </a>
+          </div>
+
+          <div class="subscribe-block news__subscribe-block">
+            <div class="subscribe-block__container">
+              <p class="subscribe-block__text">
+                Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =) 
+              </p>
+              <div class="subscribe-block__form-container">
+                <form id="subscribe-user-form" action="#">
+                  <input class="subscribe-block__email-input" type="email" placeholder="Электронная почта">
+                  <button class="basic-btn basic-btn--submit-email subscribe-block__sub-btn" type="submit">Отправить</button>
+                </form>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
 
       <section class="map-contacts index-main__map-contacts">
         <div class="map-contacts__contacts">
